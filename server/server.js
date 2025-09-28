@@ -5,6 +5,7 @@ import bcrypt from "bcrypt";
 import dns from "dns";
 import { nanoid } from "nanoid";
 import jwt from "jsonwebtoken";
+import cors from "cors";
 
 // schemas
 import User from "./Schema/User.js";
@@ -15,6 +16,7 @@ let emailRegex = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
 let passwordRegex = /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{6,20}$/;
 
 server.use(express.json());
+server.use(cors({ origin: "http://localhost:5173" }));
 dns.setDefaultResultOrder("ipv4first");
 
 mongoose.connect(process.env.DB_LOCATION, {

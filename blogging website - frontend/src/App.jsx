@@ -6,8 +6,8 @@ const App = () => {
   return (
     <Routes>
       <Route path="/" element={<Navbar />}>
-        <Route path="signIn" element={<UserAuthForm type="sign-in" />} />
-        <Route path="signUp" element={<UserAuthForm type="sign-up" />} />
+        <Route path="signIn" element={<UserAuthForm type="signin" />} />
+        <Route path="signUp" element={<UserAuthForm type="signup" />} />
       </Route>
     </Routes>
   );

@@ -1,5 +1,5 @@
 import { Link, Outlet } from "react-router-dom";
-import logo from "../imgs/logo.png";
+import logo from "../imgs/logo.jpg";
 import { useState } from "react";
 
 const Navbar = () => {
@@ -9,7 +9,7 @@ const Navbar = () => {
   return (
     <>
       <nav className="navbar">
-        <Link to="/" className="w-10 h-auto">
+        <Link to="/" className="w-14 h-auto">
           <img src={logo} alt="logo" loading="lazy" className="w-full" />
         </Link>
         <div
@@ -43,7 +43,7 @@ const Navbar = () => {
             <i className="fi fi-sr-pen-clip"></i>
           </Link>
 
-          <Link to="/signIn" className="btn-dark py-2">
+          <Link to="/signin" className="btn-dark py-2">
             sign In
           </Link>
           <Link to="/signUp" className="btn-light py-2 hidden md:block">
